@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/loginRegister-main"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "loginRegister-main"
+	}
+}

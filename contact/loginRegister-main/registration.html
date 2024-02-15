@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="registrationStyle.css">
+</head>
+
+<body>
+    <div class="register-photo register d-none">
+        <div class="form-container ">
+            <div class="sideContainer">
+                <h1>One of Our Valued Members</h1>
+                <p class="text-center">Thank you for being part of our community. Your presence enriches our shared experiences. Let's continue this journey together!</p>
+
+                <div class="form-group ">
+                    <button id="login-link" onclick="toggleForms()" class="btn btn-primary btn-block">Sign In</button>
+                </div>
+            </div>
+            <form method="post">
+                <h2 class="text-center"><strong>Create</strong> an account.</h2>
+                <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username"></div>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                <div class="form-group">
+                    <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label></div>
+                </div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div>
+                <a href="#" class="already" onclick="toggleForms()" id="login-link">You already have an account? Login here.</a></form>
+        </div>
+    </div>
+
+    <div class="register-photo login">
+        <div class="form-container">
+            <div class="sideContainer">
+                <h1>New to our community?</h1>
+                <p class="text-center">Discover a world of possibilities! Join us and explore a vibrant community where ideas flourish and connections thrive.</p>
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" onclick="toggleForms()" id="signup-link">Sign Up</button>
+                </div>
+            </div>
+            <form method="post">
+                <h2 class="text-center"><strong>Sign</strong> Up</h2>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                <div class="form-group">
+                    <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label></div>
+                </div>
+
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign In</button></div>
+                <a href="#" class="already forgot">Forgot password?</a>
+                <a href="#" onclick="toggleForms()" class="already" id="signup-link">You don't have an account? Sign up here.</a></form>
+        </div>
+    </div>
+
+    <script>
+        const toggleForms = function () {
+            let registrationForm = document.querySelector(".register");
+            let loginForm = document.querySelector(".login");
+
+            registrationForm.classList.toggle('d-none');
+            loginForm.classList.toggle('d-none');
+        };
+    </script>
+</body>
+
+</html>
